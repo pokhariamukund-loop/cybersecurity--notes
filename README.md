@@ -457,3 +457,144 @@ dig google.com ANY
 dig google.com MX
 Sending = Layer 7 → Layer 1
 Receiving = Layer 1 → Layer 7
+
+
+================================================
+ROOM 2 - HTTP IN DETAIL
+================================================
+
+WHAT IS HTTP:
+- HTTP = HyperText Transfer Protocol
+- How web browsers communicate with servers
+- Every website you visit uses HTTP/HTTPS
+- HTTPS = secure encrypted version of HTTP
+
+HTTP vs HTTPS:
+- HTTP = data sent in plain text (insecure)
+- HTTPS = data encrypted using SSL/TLS (secure)
+- Always use HTTPS for sensitive data
+- Padlock icon in browser = HTTPS
+
+================================================
+HTTP REQUESTS & RESPONSES
+================================================
+
+HOW IT WORKS:
+- Browser sends REQUEST to server
+- Server sends RESPONSE back
+- Like asking a question and getting answer
+
+HTTP REQUEST STRUCTURE:
+- Method = what action (GET, POST etc)
+- URL = which page you want
+- Headers = extra information
+- Body = data being sent (for POST)
+
+EXAMPLE REQUEST:
+GET /index.html HTTP/1.1
+Host: example.com
+User-Agent: Mozilla/5.0
+
+HTTP METHODS:
+- GET = retrieve data from server
+  (visiting a webpage)
+- POST = send data to server
+  (submitting a form/login)
+- PUT = update existing data
+- DELETE = delete data
+
+================================================
+HTTP STATUS CODES
+================================================
+
+2xx = SUCCESS:
+- 200 = OK (page found, everything good)
+- 201 = Created (new resource created)
+
+3xx = REDIRECTS:
+- 301 = Moved Permanently
+- 302 = Found (temporary redirect)
+
+4xx = CLIENT ERRORS:
+- 400 = Bad Request
+- 401 = Unauthorized (need to login)
+- 403 = Forbidden (no permission)
+- 404 = Not Found (page doesn't exist)
+- 405 = Method Not Allowed
+
+5xx = SERVER ERRORS:
+- 500 = Internal Server Error
+- 503 = Service Unavailable
+
+MEMORY TRICK:
+- 2xx = Success ✅
+- 3xx = Redirect 🔄
+- 4xx = Your fault ❌
+- 5xx = Server fault 💥
+
+================================================
+HTTP HEADERS
+================================================
+
+REQUEST HEADERS:
+- Host = which website you want
+- User-Agent = your browser info
+- Cookie = stored session data
+- Referer = which page you came from
+
+RESPONSE HEADERS:
+- Set-Cookie = server sets cookie on browser
+- Content-Type = type of data (HTML, JSON etc)
+- Server = what web server is running
+- Cache-Control = how long to cache data
+
+================================================
+COOKIES
+================================================
+
+WHAT ARE COOKIES:
+- Small pieces of data stored in browser
+- Server sends cookie → browser stores it
+- Browser sends cookie back with every request
+- Used to remember you between visits
+
+TYPES OF COOKIES:
+- Session Cookie = deleted when browser closes
+- Persistent Cookie = stays for set time period
+
+WHAT COOKIES STORE:
+- Session ID (keeps you logged in)
+- User preferences
+- Shopping cart items
+- Tracking information
+
+SECURITY ISSUES WITH COOKIES:
+- Cookie Stealing = attacker steals your cookie
+- Session Hijacking = attacker uses stolen cookie
+  to login as you
+- This is why HTTPS is important!
+
+================================================
+SECURITY RELEVANCE
+================================================
+
+HTTP ATTACKS:
+- Intercepting HTTP traffic = see passwords
+- Cookie stealing = session hijacking
+- HTTP Request manipulation = bypass security
+- Status codes help find vulnerabilities:
+  401/403 = interesting restricted areas
+  500 = server error = possible vulnerability
+
+TOOLS USED:
+- Burp Suite = intercept HTTP requests
+- OWASP ZAP = web application scanner
+- Browser DevTools = inspect HTTP traffic
+
+IMPORTANT FOR BUG BOUNTY:
+- Understanding HTTP = foundation of web hacking
+- Every web vulnerability involves HTTP
+- Burp Suite manipulates HTTP requests
+
+
+
