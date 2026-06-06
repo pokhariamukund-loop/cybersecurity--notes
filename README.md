@@ -596,5 +596,38 @@ IMPORTANT FOR BUG BOUNTY:
 - Every web vulnerability involves HTTP
 - Burp Suite manipulates HTTP requests
 
+===============================================
+MODULE 3 REMAINING - HOW WEBSITES WORK
+================================================
 
+HOW WEBSITES WORK:
+- Two main components:
+  Frontend = what you see (HTML, CSS, JS)
+  Backend = server side (databases, logic)
+
+HTML (HyperText Markup Language):
+- Structure of webpage
+- Example: <h1>Hello</h1>
+
+CSS (Cascading Style Sheets):
+- Design and styling of webpage
+- Colors, fonts, layout
+
+JavaScript:
+- Makes webpage interactive
+- Runs in browser
+- Used in XSS attacks!
+
+SENSITIVE DATA EXPOSURE:
+- Developers sometimes leave sensitive info
+  in website source code
+- Passwords, API keys, hidden pages
+- Always check page source in pentesting!
+- Right click → View Page Source
+
+HTML INJECTION:
+- Attacker injects HTML code into webpage
+- Happens when user input not sanitised
+- Example: typing HTML tags in search box
+- First step toward XSS attacks
 
